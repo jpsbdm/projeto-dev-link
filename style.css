@@ -1,9 +1,53 @@
+*{
+    padding: o;
+    margin: 0;
+font-family:"Inter";
+
+}
+
 body{
     background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+
 }
 .container {
     margin-inline: auto;
     width:360px ;
     height: 712px;
     border: 1px solid;
+    margin-top: 56px;
 }
+.profile{
+    text-align: center;
+    padding: 24px;
+}
+.profile img{
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    border-radius: 50%;
+
+}
+.profile p {
+    line-height: 24px;
+    font-weight: 500;
+    color :white;
+    margin-top: 8px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+ul li a{ 
+    border: solid rgba(255, 255, 255, 0.702);
+    background-color: #ffffff23;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 52px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
