@@ -129,7 +129,7 @@ footer {
 }
 #switch span {
 display: block;
-width: 64px;
+width: 61px;
 height: 24px;
 background: var(--surface-color);
 border: 1px solid var(--stroke-color);
@@ -139,6 +139,6 @@ border-radius: 9999px;
 z-index: 0
 }
 .light #switch button{
-    right: 0%;
+    right: 0;
     left:initial
 }
