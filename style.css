@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     font-family: "Inter";
-    color: aliceblue;
+    color: var(--text-color);
 }
 
 body {
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 .container {
@@ -44,8 +44,8 @@ ul {
 }
 
 ul li a {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--stroke-color);
+    background-color: var(--surface-color);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -59,8 +59,8 @@ ul li a {
 }
 
 ul li a:hover {
-    border: 1.5px solid rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid var(--text-color);
+    background-color: var(--hover-color);
 }
 
 #social-links {
@@ -80,11 +80,65 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--social-link-hover);
     padding: 16px;
 }
 
 footer {
     text-align: center;
     padding: 24px 0;
+}
+
+:root{
+    --text-color: white;
+        --bg-url: url(./assets/bg-mobile.jpg);
+        --stroke-color:rgba(255, 255, 255, 0.5);
+        --surface-color:rgba(255, 255, 255, 0.05);
+        --hover-color:rgba(255, 255, 255, 0.02);
+        --social-link-hover:rgba(255, 255, 255, 0.1);
+        --bg-button:url(./assets/Sun.svg)
+}
+
+.light {
+    --text-color:black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color:rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(0, 0, 0, 0.05);
+    --hover-color:rgba(0, 0, 0, 0.02);
+    --social-link-hover:rgba(0, 0, 0, 0.1);
+    --bg-button:url(./assets/MoonStars.svg)
+}
+#switch{
+    width: 64px;
+    margin: 4px auto;
+    position: relative;
+
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--bg-button) no-repeat center;
+    border:0;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0%;
+    position: absolute;
+}
+#switch span {
+display: block;
+width: 64px;
+height: 24px;
+background: var(--surface-color);
+border: 1px solid var(--stroke-color);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 9999px;
+z-index: 0
+}
+.light #switch button{
+    right: 0%;
+    left:initial
 }
